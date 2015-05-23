@@ -1,0 +1,24 @@
+﻿生成启动时间为 2015/5/1 20:13:37。
+     1>项目“C:\Users\WenhaoWang\documents\visual studio 2010\Projects\Ar360Login\Ar360Login\Ar360Login.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\Ar360Login.unsuccessfulbuild”执行 Touch 任务。
+       Midl:
+         所有输出均为最新。
+       ClCompile:
+         所有输出均为最新。
+         E:\Program Files\Visual Studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HandleDB.cpp
+         HandleDB.cpp
+     1>c:\users\wenhaowang\documents\visual studio 2010\projects\ar360login\ar360login\handledb.cpp(54): warning C4018: “>”: 有符号/无符号不匹配
+     1>c:\users\wenhaowang\documents\visual studio 2010\projects\ar360login\ar360login\handledb.cpp(226): error C2297: “+=”: 非法，右操作数包含“const char [43]”类型
+     1>c:\users\wenhaowang\documents\visual studio 2010\projects\ar360login\ar360login\handledb.cpp(226): error C2114: “+=”: 左侧指针；需要右侧的整数值
+     1>c:\users\wenhaowang\documents\visual studio 2010\projects\ar360login\ar360login\handledb.cpp(227): error C2677: 二进制“+=”: 没有找到接受“std::string”类型的全局运算符(或没有可接受的转换)
+     1>c:\users\wenhaowang\documents\visual studio 2010\projects\ar360login\ar360login\handledb.cpp(228): error C2297: “+=”: 非法，右操作数包含“const char [4]”类型
+     1>c:\users\wenhaowang\documents\visual studio 2010\projects\ar360login\ar360login\handledb.cpp(228): error C2114: “+=”: 左侧指针；需要右侧的整数值
+     1>c:\users\wenhaowang\documents\visual studio 2010\projects\ar360login\ar360login\handledb.cpp(229): error C2677: 二进制“+=”: 没有找到接受“std::string”类型的全局运算符(或没有可接受的转换)
+     1>c:\users\wenhaowang\documents\visual studio 2010\projects\ar360login\ar360login\handledb.cpp(230): error C2297: “+=”: 非法，右操作数包含“const char [4]”类型
+     1>c:\users\wenhaowang\documents\visual studio 2010\projects\ar360login\ar360login\handledb.cpp(230): error C2114: “+=”: 左侧指针；需要右侧的整数值
+     1>已完成生成项目“C:\Users\WenhaoWang\documents\visual studio 2010\Projects\Ar360Login\Ar360Login\Ar360Login.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.46

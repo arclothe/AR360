@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\Page">
+      <UniqueIdentifier>{bdd8751c-afae-4bde-936b-a552abe1a092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Page\Core">
+      <UniqueIdentifier>{78d3b1c8-8297-4a2d-9a37-abbfab91cc17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ALL_PAGE.h">
+      <Filter>源文件\Page</Filter>
+    </ClInclude>
+    <ClInclude Include="Page.h">
+      <Filter>源文件\Page\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ArNode.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Mk3Tex.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PageBuy.cpp">
+      <Filter>源文件\Page</Filter>
+    </ClCompile>
+    <ClCompile Include="PageDress.cpp">
+      <Filter>源文件\Page</Filter>
+    </ClCompile>
+    <ClCompile Include="PageIndex.cpp">
+      <Filter>源文件\Page</Filter>
+    </ClCompile>
+    <ClCompile Include="PageRecomm.cpp">
+      <Filter>源文件\Page</Filter>
+    </ClCompile>
+    <ClCompile Include="PageShare.cpp">
+      <Filter>源文件\Page</Filter>
+    </ClCompile>
+    <ClCompile Include="PageTest3D.cpp">
+      <Filter>源文件\Page</Filter>
+    </ClCompile>
+    <ClCompile Include="Page.cpp">
+      <Filter>源文件\Page\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ArNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Quick.inl">
+      <Filter>源文件\Page\Core</Filter>
+    </None>
+  </ItemGroup>
+</Project>

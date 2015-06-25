@@ -37,7 +37,7 @@ class ArNode : public scene::ISceneNode{
 		vector3df r = mat.getRotationDegrees();
 		vector3df s = mat.getScale();
 
-		/*p.Y = -p.Y;
+		p.Y = -p.Y;
 		r.X = -r.X;
 		r.Z = -r.Z;
 		r.Y = -r.Y;
@@ -45,12 +45,13 @@ class ArNode : public scene::ISceneNode{
 		r.Z += 180;
 		r.Y += 180;
 
-		p.X *= 2;
-		p.Y *= 2;
-		p.Z *= 2;
+		float dp = 2;
+		p.X *= dp;
+		p.Y *= dp;
+		//p.Z *= dp;
 
 
-		s *= 5;*/
+		//s *= 5;
 
 		pNode->setPosition(p);
 		pNode->setRotation(r);

@@ -47,7 +47,7 @@ void PageBuy::onInit(void* pData){
 	s_guienv()->addStaticText(L"Welcome to PageBuy",
 		rect<s32>(10, 10, 500, 50), true);
 
-	s_guienv()->addImage(s_driver()->getTexture("res/Buy.bmp"),
+	s_guienv()->addImage(s_driver()->getTexture("Ar360Res/UI/Buy.bmp"),
 	position2d<int>(10, 20));
 
 

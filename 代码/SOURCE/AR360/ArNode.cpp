@@ -1,5 +1,6 @@
 #include "ArNode.h"
 
-ArNode*	ArNode::s_CurrentRenderNode = NULL;
+// C++里面的静态变量，需要再定义一下
 
-mk3::var_texture* Mk3TexSingleton::s_pTex = NULL;
+ArNode*					ArNode::s_CurrentRenderNode	= NULL;
+mk3::var_texture*		Mk3TexSingleton::s_pTex		= NULL;

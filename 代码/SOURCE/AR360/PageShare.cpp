@@ -47,7 +47,7 @@ void PageShare::onInit(void* pData){
 	s_guienv()->addStaticText(L"Welcome to PageShare",
 		rect<s32>(10, 10, 500, 50), true);
 
-	s_guienv()->addImage(s_driver()->getTexture("res/Share.bmp"),
+	s_guienv()->addImage(s_driver()->getTexture("Ar360Res/UI/Share.bmp"),
 		position2d<int>(10, 20));
 
 

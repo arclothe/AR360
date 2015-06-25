@@ -60,21 +60,21 @@ void PageDress::onInit(void* pData){
 	smgr->addLightSceneNode(0, core::vector3df(0, 0, -100),
 		video::SColorf(1.0f, 1.0f, 1.0f, 1.0f), 1500.0f);
 
-	/*scene::IMeshSceneNode* calibrCube1 = smgr->addCubeSceneNode(100.0f);
-	scene::IMeshSceneNode* calibrCube2 = smgr->addCubeSceneNode(100.0f);*/
 
-	IMesh* c1 = smgr->getMesh("Model/StdMod.obj");
-	IMesh* c2 = smgr->getMesh("Model/123.obj");
+	IMesh* c1 = smgr->getMesh("Ar360Res/Model/4444.obj");
+	//IMesh* c1 = smgr->getMesh(Path_Calibr);
+	IMesh* c2 = smgr->getMesh(Path_Calibr);
 	
 
 	scene::IMeshSceneNode* calibrCube1 = smgr->addMeshSceneNode(c1);
 	scene::IMeshSceneNode* calibrCube2 = smgr->addMeshSceneNode(c2);
 
+	// !!!很重要 实现延迟渲染，不然渲不上去
 	calibrCube1->setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL);
 	calibrCube2->setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL);
 
-	myNode->addFriendNode(calibrCube1);
-	myNode->addFriendNode(calibrCube2);
+	myNode->addFriendNode(MK3_Marker_Front_Up, calibrCube1);
+	myNode->addFriendNode(MK3_Marker_Front_Down, calibrCube2);
 
 
 	scene::ICameraSceneNode* camera = smgr->addCameraSceneNode();

@@ -73,7 +73,7 @@ void PageIndex::onInit(void* pData){
 	s_guienv()->addStaticText(L"Welcome to Ar360",
 		rect<s32>(10, 10, 500, 50), true);
 
-	s_guienv()->addImage(s_driver()->getTexture("res/index.bmp"),
+	s_guienv()->addImage(s_driver()->getTexture("/index.bmp"),
 		position2d<int>(10, 20));
 
 

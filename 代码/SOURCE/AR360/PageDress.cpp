@@ -56,15 +56,19 @@ void PageDress::onInit(void* pData){
 	ISceneManager* smgr = s_smgr();
 	ArNode *myNode = new ArNode(smgr->getRootSceneNode(), smgr, 666);
 
-	scene::ISceneNode* node = smgr->addLightSceneNode(0, core::vector3df(0, 0, 0),
-		video::SColorf(1.0f, 0.6f, 0.7f, 1.0f), 800.0f);
-	scene::ISceneNodeAnimator* anim = 0;
-	anim = smgr->createFlyCircleAnimator(core::vector3df(0, 150, 0), 250.0f);
-	node->addAnimator(anim);
-	anim->drop();
+	s_smgr()->setAmbientLight(SColor(255, 100, 100, 100));
+	smgr->addLightSceneNode(0, core::vector3df(0, 0, -100),
+		video::SColorf(1.0f, 1.0f, 1.0f, 1.0f), 1500.0f);
 
-	scene::IMeshSceneNode* calibrCube1 = smgr->addCubeSceneNode(100.0f);
-	scene::IMeshSceneNode* calibrCube2 = smgr->addCubeSceneNode(100.0f);
+	/*scene::IMeshSceneNode* calibrCube1 = smgr->addCubeSceneNode(100.0f);
+	scene::IMeshSceneNode* calibrCube2 = smgr->addCubeSceneNode(100.0f);*/
+
+	IMesh* c1 = smgr->getMesh("Model/StdMod.obj");
+	IMesh* c2 = smgr->getMesh("Model/123.obj");
+	
+
+	scene::IMeshSceneNode* calibrCube1 = smgr->addMeshSceneNode(c1);
+	scene::IMeshSceneNode* calibrCube2 = smgr->addMeshSceneNode(c2);
 
 	calibrCube1->setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL);
 	calibrCube2->setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL);

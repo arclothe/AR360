@@ -12,6 +12,7 @@ using namespace gui;
 IrrlichtDevice *	s_device(){
 	static IrrlichtDevice *	device = NULL;
 	while(NULL==device)
+		//device = createDevice(EDT_DIRECT3D9, dimension2d<u32>(640, 480));
 		device = createDevice(EDT_OPENGL, dimension2d<u32>(640, 480));
 	return device;
 }

@@ -32,7 +32,7 @@ static const int Cam_Width  = 640;
 static const int Cam_Height = 480;
 
 // 常量，增强现实的初始阈值，范围是0~255，灯光越强，阈值应该越高
-static const int Thresh_Init = 100;
+static const int Thresh_Init = 60;
 
 // Mk3 的头文件，及其库
 #include "mk3/mk3toolkit.h"
@@ -50,7 +50,11 @@ public:
 
 		s_pTex = new mk3::var_texture();
 		mk3::parameter pm;
+		
+		
 		pm.setDefault();
+
+		pm.ar_isShowSquare = 0;
 		pm.ar_thresh = Thresh_Init;
 		s_pTex->init_fbo(Cam_Width, Cam_Height);
 		s_pTex->init_cam(0);
@@ -59,8 +63,8 @@ public:
 	}
 	// 模块组件清理
 	static void uninit(){
-		if (s_pTex)
-			delete s_pTex;
+//		if (s_pTex)
+//			delete s_pTex;
 	}
 	// 设置Ar回调函数指针
 	static void set_arFunc(mk3::var_texture::arFunc f){

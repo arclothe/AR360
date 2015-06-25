@@ -3,6 +3,8 @@
 IRR_NAMESPACE
 
 // GUI ID 的枚举
+IAnimatedMesh *mesh=NULL;
+ITexture *texture=NULL;
 enum{
 	GUI_ID_BUTTON_BACK_TO_INDEX
 };
@@ -49,25 +51,32 @@ void PageDress::onInit(void* pData){
 		rect<s32>(10, 10, 500, 50), true);
 
 
-	s_guienv()->addButton(rect<s32>(10, 240, 110, 240 + 32), 0, GUI_ID_BUTTON_BACK_TO_INDEX,
+	s_guienv()->addButton(rect<s32>(560, 440, 600, 460), 0, GUI_ID_BUTTON_BACK_TO_INDEX,
 		L"Back", L"description:Back");
 
 
 	ISceneManager* smgr = s_smgr();
 	ArNode *myNode = new ArNode(smgr->getRootSceneNode(), smgr, 666);
 
-	s_smgr()->setAmbientLight(SColor(255, 100, 100, 100));
+	s_smgr()->setAmbientLight(SColor(255, 160, 160, 160));
 	smgr->addLightSceneNode(0, core::vector3df(0, 0, -100),
 		video::SColorf(1.0f, 1.0f, 1.0f, 1.0f), 1500.0f);
-
-
-	IMesh* c1 = smgr->getMesh("Ar360Res/Model/t1.obj");
+		smgr->addLightSceneNode(0, core::vector3df(0, 0, 100),
+		video::SColorf(1.0f, 1.0f, 1.0f, 1.0f), 1500.0f);
+		
+	IMesh* c1;
+	if(mesh==NULL)
+	{
+		c1=smgr->getMesh("Ar360Res/Model/shirt/safa/shirt.obj");
+	}
+	else
+		c1=mesh;
 	IMesh* c2 = smgr->getMesh(Path_Calibr);
 	
-
 	scene::IMeshSceneNode* node1 = smgr->addMeshSceneNode(c1);
 	scene::IMeshSceneNode* node2 = smgr->addMeshSceneNode(c2);
-
+	if(texture)
+		node1->setMaterialTexture(0,texture);
 	// !!!很重要 实现延迟渲染，不然渲不上去
 	node1->setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL);
 	node2->setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL);

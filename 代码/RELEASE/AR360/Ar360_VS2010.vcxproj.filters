@@ -19,6 +19,9 @@
     <Filter Include="源文件\Page\Core">
       <UniqueIdentifier>{78d3b1c8-8297-4a2d-9a37-abbfab91cc17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\FileHandle">
+      <UniqueIdentifier>{ee5588c1-7b2c-43b0-a575-d16ae9a9179a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ALL_PAGE.h">
@@ -32,6 +35,12 @@
     </ClInclude>
     <ClInclude Include="Mk3Tex.h">
       <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PageRecomm.h">
+      <Filter>源文件\Page</Filter>
+    </ClInclude>
+    <ClInclude Include="BrowseDir.h">
+      <Filter>源文件\FileHandle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +67,15 @@
     </ClCompile>
     <ClCompile Include="ArNode.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PageChest.cpp">
+      <Filter>源文件\Page</Filter>
+    </ClCompile>
+    <ClCompile Include="PageMaker.cpp">
+      <Filter>源文件\Page</Filter>
+    </ClCompile>
+    <ClCompile Include="BrowseDir.cpp">
+      <Filter>源文件\FileHandle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

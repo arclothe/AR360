@@ -5,9 +5,10 @@ DeclPage(PageIndex)
 DeclPage(PageDress)
 DeclPage(PageBuy)
 DeclPage(PageShare)
-DeclPage(PageRecomm)
+#include "PageRecomm.h"
 DeclPage(PageTest3D)
-
+DeclPage(PageMaker)
+DeclPage(PageChest)
 /*
 
 这里我把所有页面类的声明放在一起了，

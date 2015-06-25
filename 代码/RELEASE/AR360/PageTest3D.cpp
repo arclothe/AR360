@@ -42,16 +42,21 @@ public:
 void PageTest3D::onInit(void* pData){
 	
 
-	IAnimatedMesh* mesh = s_smgr()->getMesh("Ar360Res/UI/sydney.md2");
-
+	IAnimatedMesh* mesh = s_smgr()->getMesh("Ar360Res/UI/t5.obj");
+	s_smgr()->setAmbientLight(SColor(255, 160, 160, 160));
 	IAnimatedMeshSceneNode* node = s_smgr()->addAnimatedMeshSceneNode(mesh);
-
-	node->setMaterialFlag(EMF_LIGHTING, false);
-	node->setMD2Animation(scene::EMAT_STAND);
-	node->setMaterialTexture(0, s_driver()->getTexture("Ar360Res/UI/sydney.bmp"));
 	
+	scene::ISceneNodeAnimator* anim =
+		s_smgr()->createRotationAnimator(core::vector3df(0.0f, 1.0f, 0.0f));
+	node->setMaterialFlag(EMF_LIGHTING, true);
+	node->addAnimator(anim);
+	anim->drop();
+		anim = 0;
+	//node->setMD2Animation(scene::EMAT_STAND);
+	//node->setMaterialTexture(0, s_driver()->getTexture("Ar360Res/UI/sydney.bmp"));
+	//
 
-	s_smgr()->addCameraSceneNode(0, vector3df(0, 30, -40), vector3df(0, 5, 0));
+	s_smgr()->addCameraSceneNode(0, vector3df(0, 0, -20), vector3df(0, 5, 0));
 
 	s_guienv()->addButton(rect<s32>(10, 240, 110, 240 + 32), 0, GUI_ID_BUTTON_BACK_TO_INDEX,
 		L"Back", L"description:Back");
